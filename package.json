@@ -1,9 +1,0 @@
-{
-  "name": "redirect2",
-  "version": "1.0.0",
-  "description": "Simple service to redirect page.",
-  "main": "index.js",
-  "repository": "https://git.heroku.com/redirect2.git",
-  "author": "Steven Chong <7chong+redirect2@gmail.com>",
-  "license": "MIT"
-}
