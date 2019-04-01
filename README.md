@@ -1,6 +1,6 @@
 # redirect2
 > Simple service to redirect page.
-
+> Some of the web service doesn't allow redirect using custom protocal, you can use this as a workaround.
 
 
 ### Usage.
