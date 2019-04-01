@@ -5,13 +5,13 @@
 
 ### Usage.
 
-client side redirect (won't keep history)
+client side redirect (won't keep history, when user clicked back button, it will go to previous page)
 
 ```
 http://redirect2.herokuapp.com#{your url without encode}
 ```
 
-or server side redirect (keep history)
+or server side redirect (keep history, user will need to click the back button twice to go to previous page)
 
 ```
 http://redirect2.herokuapp.com?{your url without encode}
