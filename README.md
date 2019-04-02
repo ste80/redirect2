@@ -8,14 +8,24 @@
 client side redirect (won't keep history, when user clicked back button, it will go to previous page)
 
 ```
-http://redirect2.herokuapp.com#{your url without encode}
+https://redirect2.herokuapp.com#{your url without encode}
 ```
+
+Sample 
+* [Full url](https://redirect2.herokuapp.com#https://github.com/ste80/redirect2)
+* [Full url with query](https://redirect2.herokuapp.com#https://github.com/ste80/redirect2?whateverparam=a%20b)
+* [Full url with hash](https://redirect2.herokuapp.com#https://github.com/ste80/redirect2#otherhash)
+* [Relative url](https://redirect2.herokuapp.com#/ste80/redirect2)
 
 or server side redirect (keep history, user will need to click the back button twice to go to previous page)
 
 ```
-http://redirect2.herokuapp.com?{your url without encode}
+https://redirect2.herokuapp.com?{your url without encode}
 ```
+
+* [Full url](https://redirect2.herokuapp.com?https://github.com/ste80/redirect2)
+* [Full url with query](https://redirect2.herokuapp.com?https://github.com/ste80/redirect2?whateverparam=a%20b)
+* [Relative url](https://redirect2.herokuapp.com?/ste80/redirect2)
 
 
 
