@@ -1,11 +1,14 @@
 <?php
 $query = $_SERVER['QUERY_STRING'];
 if ( !empty($query) ) {
+    $ref = '';
 
     if (substr($query, 0, 1) == '/' && !empty($_SERVER['HTTP_REFERER'])) {
         $url_array = parse_url($_SERVER['HTTP_REFERER']);
-        $port = empty($url_array['port']) || int($url_array['port']) == 80 ? '' ':' . $url_array['port'];
-        $query = $url_array['scheme'] . '://' . $url_array['hostname'] . $port . $query;
+        $schema = empty($url_array['scheme']) ? 'https' : $url_array['scheme'];
+        $port = empty($url_array['port']) || intval($url_array['port']) == 80 ? '' ':' . $url_array['port'];
+        $ref = schema . '://' . $url_array['hostname'] . $port;
+        $query = $ref . $query;
     }
 
     header('Location: ' . $query);
