@@ -1,15 +1,15 @@
 <?php
 $query = $_SERVER['QUERY_STRING'];
 if ( !empty($query) ) {
-    $ref = '';
+    // $ref = '';
 
-    if (substr($query, 0, 1) == '/' && !empty($_SERVER['HTTP_REFERER'])) {
-        $url_array = parse_url($_SERVER['HTTP_REFERER']);
-        $schema = empty($url_array['scheme']) ? 'https' : $url_array['scheme'];
-        $port = empty($url_array['port']) || intval($url_array['port']) == 80 ? '' ':' . $url_array['port'];
-        $ref = schema . '://' . $url_array['hostname'] . $port;
-        $query = $ref . $query;
-    }
+    // if (substr($query, 0, 1) == '/' && !empty($_SERVER['HTTP_REFERER'])) {
+    //     $url_array = parse_url($_SERVER['HTTP_REFERER']);
+    //     $schema = empty($url_array['scheme']) ? 'https' : $url_array['scheme'];
+    //     $port = empty($url_array['port']) || intval($url_array['port']) == 80 ? '' ':' . $url_array['port'];
+    //     $ref = schema . '://' . $url_array['hostname'] . $port;
+    //     $query = $ref . $query;
+    // }
 
     header('Location: ' . $query);
 } else {
