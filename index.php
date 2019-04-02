@@ -16,6 +16,6 @@ if ( !empty($query) ) {
         header('Location: ' . $query);
     }
 } else {
-?><!DOCTYPE html><html><body><script>(function(l,d){t=l.hash.substr(1);t&&l.replace(t);d.title=t;setTimeout(function(){a=d.createElement('a');a.href=(t||'javascript:history.back()').replace(/^\//,<?= json_encode($referer . '/') ?>);a.innerText='Click here to continue';d.body.appendChild(a)},1000)})(location,document)</script></body></html><?php
+?><!DOCTYPE html><html><body><script>(function(l,d){t=l.hash.substr(1).replace(/^\//,<?= json_encode($referer . '/') ?>);t&&l.replace(t);d.title=t;setTimeout(function(){a=d.createElement('a');a.href=t||'javascript:history.back()';a.innerText='Click here to continue';d.body.appendChild(a)},1000)})(location,document)</script></body></html><?php
 }
 ?>
